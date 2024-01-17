@@ -27,17 +27,10 @@ public:
         if (target == matrix[i][j])
             return true;
         else if (target < matrix[i][j])
-        {
             right = mid - 1;
-            return search(matrix, target, left, right);
-        }
         else
-        {
             left = mid + 1;
-            return search(matrix, target, left, right);
-        }
-
-        return true;
+        return search(matrix, target, left, right);
     }
 
 public:
